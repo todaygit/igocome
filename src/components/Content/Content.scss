@@ -1,7 +1,10 @@
-.content {
+div.content {
   display: flex;
   flex-flow: column nowrap;
   align-items: center;
+  // background: rgba(231, 158, 0, 0.4);
+  background-blend-mode: multiply;
+  background-image: linear-gradient(rgba(231, 158, 0, 0.6), rgba(231, 158, 0, 0.3));
   p {
     text-align: center;
   }
@@ -63,7 +66,7 @@
       }
       .content {
         font-family: HelveticaNeue;
-        font-size: 20px;
+        font-size: 18px;
         font-weight: normal;
         font-style: normal;
         font-stretch: normal;
