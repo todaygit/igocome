@@ -5,8 +5,10 @@
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+  background: #040333;
 
   .copyright {
+    color: gray;
     margin: auto 32px;
   }
 

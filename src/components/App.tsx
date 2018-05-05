@@ -1,4 +1,5 @@
 import * as React from "react";
+import "./../assets/scss/responsive.scss";
 import "./../assets/scss/App.scss";
 
 import Header from "./Header/Header";

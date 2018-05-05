@@ -22,5 +22,14 @@ body {
 
   ul {
     list-style-type: none;
+
+    li {
+      color: white;
+      cursor: pointer;
+
+      &:hover {
+        color: dodgerblue;
+      }
+    }
   }
 }
