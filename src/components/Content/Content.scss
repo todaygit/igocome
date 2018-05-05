@@ -1,0 +1,77 @@
+.content {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  p {
+    text-align: center;
+  }
+  .title {
+    font-family: FuturaStd;
+    font-size: 40px;
+    font-weight: normal;
+    font-style: oblique;
+    font-stretch: condensed;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: center;
+    color: #ffffff;
+    margin-top: 70px;
+  }
+  .acc {
+    margin-top: 10px;
+  }
+  .started {
+    width: 140px;
+    height: 44px;
+    background-color: #efb107;
+    color: white;
+    border: none;
+    margin-top: 70px;
+  }
+  .exp {
+    margin-top: 80px;
+    margin-bottom: 46px;
+  }
+  .show {
+    width: 100%;
+    min-height: 240px;
+    background-color: #ffffff;
+    color: black;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    .cont {
+      width: 300px;
+      height: 240px;
+      border-left: 1px silver solid;
+      border-right: 1px silver solid;
+      margin: auto 50px;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      padding: 40px 0px;
+      .sub {
+        font-family: HelveticaNeue;
+        font-size: 26px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #1d1d1d;
+      }
+      .content {
+        font-family: HelveticaNeue;
+        font-size: 20px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.54;
+        letter-spacing: normal;
+        text-align: center;
+        color: #444444;
+      }
+    }
+  }
+}
