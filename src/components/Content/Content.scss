@@ -5,11 +5,13 @@ div.content {
   // background: rgba(231, 158, 0, 0.4);
   background-blend-mode: multiply;
   background-image: linear-gradient(rgba(231, 158, 0, 0.6), rgba(231, 158, 0, 0.3));
+
   p {
     text-align: center;
   }
+
   .title {
-    font-family: FuturaStd;
+    // font-family: FuturaStd;
     font-size: 40px;
     font-weight: normal;
     font-style: oblique;
@@ -17,12 +19,14 @@ div.content {
     line-height: 1.25;
     letter-spacing: normal;
     text-align: center;
-    color: #ffffff;
+    color: #fff;
     margin-top: 70px;
   }
+
   .acc {
     margin-top: 10px;
   }
+
   .started {
     width: 140px;
     height: 44px;
@@ -31,18 +35,21 @@ div.content {
     border: none;
     margin-top: 70px;
   }
+
   .exp {
     margin-top: 80px;
     margin-bottom: 46px;
   }
+
   .show {
     width: 100%;
     min-height: 240px;
-    background-color: #ffffff;
+    background-color: #fff;
     color: black;
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+
     .cont {
       width: 300px;
       height: 240px;
@@ -52,10 +59,11 @@ div.content {
       display: flex;
       flex-flow: column nowrap;
       align-items: center;
-      padding: 40px 0px;
+      padding: 40px 2px;
+
       .sub {
-        font-family: HelveticaNeue;
-        font-size: 26px;
+        // font-family: HelveticaNeue;
+        font-size: 22px;
         font-weight: bold;
         font-style: normal;
         font-stretch: normal;
@@ -64,16 +72,17 @@ div.content {
         text-align: center;
         color: #1d1d1d;
       }
+
       .content {
-        font-family: HelveticaNeue;
-        font-size: 18px;
+        // font-family: HelveticaNeue;
+        font-size: 16px;
         font-weight: normal;
         font-style: normal;
         font-stretch: normal;
         line-height: 1.54;
         letter-spacing: normal;
         text-align: center;
-        color: #444444;
+        color: #444;
       }
     }
   }

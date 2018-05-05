@@ -15,12 +15,14 @@
   "author": "Viktor Persson",
   "license": "MIT",
   "scripts": {
-    "build": "npm run clean-dist && webpack -p --config=configs/webpack/prod.js",
+    "build": "webpack -p --config=configs/webpack/prod.js",
+    "build:dev": "webpack -p --config=configs/webpack/dev.js",
     "clean-dist": "del -f dist",
-    "lint": "npm run lint:ts && npm run lint:sass",
+    "lint": "npm run lint:ts",
     "lint:ts": "tslint './src/**/*.ts*' --format stylish --force",
     "lint:sass": "stylelint ./src/**/*.scss",
-    "start": "npm run start-dev",
+    "start": "node server.js",
+    "postinstall": "npm install",
     "start-dev": "webpack-dev-server --config=configs/webpack/dev.js",
     "start-prod": "npm run build && node express.js",
     "test": "jest --watch --coverage --config=configs/jest.json"

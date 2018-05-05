@@ -5,13 +5,16 @@
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
+
   .copyright {
     margin: auto 32px;
   }
+
   .menu {
     flex: 2 2 auto;
     display: flex;
     justify-content: center;
+
     li {
       margin: auto 20px;
     }
