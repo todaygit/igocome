@@ -1,4 +1,6 @@
 import * as React from "react";
+import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "../../node_modules/bootstrap/dist/css/bootstrap-theme.min.css";
 import "./../assets/scss/responsive.scss";
 import "./../assets/scss/App.scss";
 
