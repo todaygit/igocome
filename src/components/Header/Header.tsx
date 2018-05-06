@@ -1,5 +1,6 @@
 import * as React from "react";
 import "./Header.scss";
+import "./responsive.scss";
 
 const logo = require("./assets/img/page-1.png");
 

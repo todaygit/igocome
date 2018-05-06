@@ -1,0 +1,21 @@
+@media only screen and (max-width: 768px) {
+  .footer {
+    position: static !important;
+    flex-flow: column-reverse nowrap !important;
+    align-items: stretch !important;
+
+    ul {
+      flex-flow: column nowrap !important;
+      padding: 0 !important;
+      margin: 32px !important;
+
+      li {
+        margin: 15px 0 !important;
+      }
+    }
+
+    .copyright {
+      padding-bottom: 30px !important;
+    }
+  }
+}

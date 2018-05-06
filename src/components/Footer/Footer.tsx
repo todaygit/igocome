@@ -1,5 +1,6 @@
 import * as React from "react";
 import "./Footer.scss";
+import "./responsive.scss";
 
 export default class Footer extends React.Component<{}, undefined> {
   render() {

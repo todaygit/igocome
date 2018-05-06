@@ -1,0 +1,13 @@
+@media only screen and (max-width: 768px) {
+  .header {
+    justify-content: space-between;
+    flex-flow: row nowrap !important;
+
+    .menu {
+      display: none !important;
+    }
+  }
+}
+
+// @media only screen and (min-width: 992px) {}
+// @media only screen and (min-width: 1200px) {}

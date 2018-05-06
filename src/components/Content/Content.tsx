@@ -1,5 +1,6 @@
 import * as React from "react";
 import "./Content.scss";
+import "./responsive.scss";
 const ruby = require("../../assets/img/me/ruby.png");
 const phone = require("../../assets/img/me/phone.png");
 const routes = require("../../assets/img/me/routes.png");
