@@ -1,4 +1,9 @@
 @media only screen and (max-width: 768px) {
+  .app {
+    background-size: 100% 500px !important;
+    background-position: 66% 0% !important;
+  }
+
   .header .menu {
     display: none !important;
   }
@@ -11,6 +16,16 @@
   div.content {
     .title {
       font-size: 24px !important;
+    }
+
+    .show {
+      .sub {
+        font-size: 18px !important;
+      }
+
+      .content {
+        font-size: 14px !important;
+      }
     }
 
     .exp {
