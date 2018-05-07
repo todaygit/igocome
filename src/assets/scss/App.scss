@@ -1,15 +1,22 @@
 $bg-color: yellow;
 $border-color: red;
 
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('../fonts/HelveticaNeue-01.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
 body {
   padding: 0;
   margin: 0;
   background: burlywood;
   background-color: #040333;
+  font-family: HelveticaNeue, serif;
+  font-size: 16px;
 }
 
 .app {
-  font-family: helvetica, arial, sans-serif;
+  // font-family: helvetica, arial, sans-serif;
   padding: 0;
   margin: 0;
   width: 100%;
@@ -17,7 +24,7 @@ body {
   color: white;
   background-image: url("../img/photos/woman_wide_2.jpg");
   background-repeat: no-repeat;
-  background-size: 1366px 700px;
+  background-size: 1366px 550px;
   background-position: top;
 
   ul {

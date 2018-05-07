@@ -3,8 +3,8 @@ div.content {
   flex-flow: column nowrap;
   align-items: center;
   // background: rgba(231, 158, 0, 0.4);
-  background-blend-mode: multiply;
-  background-image: linear-gradient(rgba(231, 158, 0, 0.6), rgba(231, 158, 0, 0.3));
+  // background-blend-mode: multiply;
+  // background-image: linear-gradient(rgba(231, 158, 0, 0.6), rgba(231, 158, 0, 0.3));
 
   p {
     text-align: center;
@@ -21,6 +21,8 @@ div.content {
     text-align: center;
     color: #fff;
     margin-top: 70px;
+    margin-bottom: 25px;
+    transform: scale(1, 1.8);
   }
 
   .acc {
@@ -52,7 +54,7 @@ div.content {
 
     .cont {
       width: 300px;
-      margin: auto 50px;
+      margin: 12px 50px;
       display: flex;
       flex-flow: column nowrap;
       align-items: center;
