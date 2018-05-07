@@ -1,4 +1,5 @@
 import * as React from "react";
+
 import "./Content.scss";
 import "./responsive.scss";
 const ruby = require("../../assets/img/me/ruby.png");
@@ -10,7 +11,7 @@ export default class Content extends React.Component<{}, undefined> {
       <div className="content">
         <h1 className="title">SEARCH ALL ROUTES AT ONCE</h1>
         <p className="acc">Find the best deals across all Providers in one location.</p>
-        <button className="started">Get Started</button>
+        <button className="started hvr-rectangle-out">Get Started</button>
         <p className="exp">For the best experience, please use your mobile phone when searching the best deals.</p>
         <div className="al-show">
           <div className="cont no1">
