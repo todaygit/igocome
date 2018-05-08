@@ -15,6 +15,16 @@ body {
   font-size: 16px;
 }
 
+#bg {
+  background-image: url("../img/photos/woman_wide_2.jpg");
+  position: fixed;
+  z-index: -5;
+  width: 100vw;
+  height: 100vh;
+  background-size: auto 100vh;
+  background-position: top right 35%;
+}
+
 .app {
   // font-family: helvetica, arial, sans-serif;
   padding: 0;
@@ -22,7 +32,7 @@ body {
   width: 100%;
   border: none;
   color: white;
-  background-image: url("../img/photos/woman_wide_2.jpg");
+  // background-image: url("../img/photos/woman_wide_2.jpg");
   background-repeat: no-repeat;
   background-size: 1366px 550px;
   background-position: top;

@@ -1,19 +1,35 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-    <head>
-        <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>iGo Business</title>
-        <link rel="icon" href="./img/favicon.ico" type="image/ico">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" />
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
-    </head>
-    <body>
-        <div id="root"></div>
 
-        <!-- Dependencies -->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.2.0/umd/react.production.min.js" integrity="sha256-wouRkivKKXA3y6AuyFwcDcF50alCNV8LbghfYCH6Z98=" crossorigin="anonymous"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.2.0/umd/react-dom.production.min.js" integrity="sha256-9hrJxD4IQsWHdNpzLkJKYGiY/SEZFJJSUqyeZPNKd8g=" crossorigin="anonymous"></script>
-        <script src="https://unpkg.com/material-ui@next/umd/material-ui.production.min.js" crossorigin="anonymous"></script>
-    <script type="text/javascript" src="/js/bundle.0c0930ef499a452033e8.min.js"></script></body>
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>iGo Business</title>
+	<link rel="icon" href="./img/favicon.ico" type="image/ico">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/hover.css/2.3.1/css/hover-min.css" />
+	<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500">
+</head>
+
+<body>
+	<div id="root"></div>
+	<div id="progress" data-0="width:0%;" data-end="width:100%;"
+	  style="position: fixed; height:1px; bottom:0px; background:silver;"></div>
+	<!-- Dependencies -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react/16.2.0/umd/react.production.min.js" integrity="sha256-wouRkivKKXA3y6AuyFwcDcF50alCNV8LbghfYCH6Z98="
+	  crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.2.0/umd/react-dom.production.min.js" integrity="sha256-9hrJxD4IQsWHdNpzLkJKYGiY/SEZFJJSUqyeZPNKd8g="
+	  crossorigin="anonymous"></script>
+	<script src="https://unpkg.com/material-ui@next/umd/material-ui.production.min.js" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
+	<script type="text/javascript">
+		document.addEventListener("DOMContentLoaded", function (event) {
+			//do work
+			skrollr.init({
+				smoothScrolling: false,
+				mobileDeceleration: 0.004
+			});
+		});
+	</script>
+<script type="text/javascript" src="/js/bundle.ed33515b9ef19b9b64cc.min.js"></script></body>
+
 </html>

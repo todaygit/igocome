@@ -17,6 +17,7 @@ export default class App extends React.Component<AppProps, undefined> {
     render() {
         return (
             <div className="app">
+                <div id="bg"></div>
                 <Header/>
                 <Content/>
                 <Footer/>

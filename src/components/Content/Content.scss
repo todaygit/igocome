@@ -12,7 +12,7 @@ div.content {
 
   .title {
     // font-family: FuturaStd;
-    font-size: 40px;
+    font-size: 50px;
     font-weight: normal;
     font-style: oblique;
     font-stretch: condensed;
@@ -20,7 +20,7 @@ div.content {
     letter-spacing: normal;
     text-align: center;
     color: #fff;
-    margin-top: 70px;
+    margin-top: 20vh;
     margin-bottom: 25px;
     transform: scale(1, 1.8);
   }
@@ -36,6 +36,7 @@ div.content {
     color: white;
     border: none;
     margin-top: 70px;
+    outline-style: none;
   }
 
   .exp {
@@ -51,6 +52,8 @@ div.content {
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    margin-bottom: 30vh;
+    margin-top: 20vh;
 
     .cont {
       width: 300px;
