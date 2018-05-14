@@ -1,7 +1,9 @@
 div.content {
   display: flex;
   flex-flow: column nowrap;
+  justify-content: space-between;
   align-items: center;
+  min-height: 75vh;
   // background: rgba(231, 158, 0, 0.4);
   // background-blend-mode: multiply;
   // background-image: linear-gradient(rgba(231, 158, 0, 0.6), rgba(231, 158, 0, 0.3));
@@ -12,7 +14,7 @@ div.content {
 
   .title {
     // font-family: FuturaStd;
-    font-size: 50px;
+    font-size: 45px;
     font-weight: normal;
     font-style: oblique;
     font-stretch: condensed;
@@ -20,7 +22,7 @@ div.content {
     letter-spacing: normal;
     text-align: center;
     color: #fff;
-    margin-top: 20vh;
+    margin-top: 80px;
     margin-bottom: 25px;
     transform: scale(1, 1.8);
   }
@@ -35,13 +37,11 @@ div.content {
     background-color: #efb107;
     color: white;
     border: none;
-    margin-top: 70px;
     outline-style: none;
   }
 
   .exp {
-    margin-top: 80px;
-    margin-bottom: 46px;
+    // margin-bottom: auto;
   }
 
   .al-show {
@@ -50,10 +50,8 @@ div.content {
     background-color: #fff;
     color: black;
     display: flex;
-    flex-flow: row wrap;
+    flex-flow: row nowrap;
     justify-content: center;
-    margin-bottom: 30vh;
-    margin-top: 20vh;
 
     .cont {
       width: 300px;

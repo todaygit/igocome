@@ -8,7 +8,7 @@ import Header from "./Header/Header";
 import Footer from "./Footer/Footer";
 import Content from "./Content/Content";
 
-const reactLogo = require("./../assets/img/react_logo.svg");
+const bgpng = require("./../assets/img/photos/900-1330-b-2-c-banner@2x.png");
 
 export interface AppProps {
 }
