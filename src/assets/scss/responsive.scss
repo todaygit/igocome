@@ -76,6 +76,12 @@
     flex-wrap: wrap !important;
   }
 
+  .header {
+    img {
+      margin: auto 10px !important;
+    }
+  }
+
   div.content .started {
     margin-top: 3em !important;
     margin-bottom: 3em !important;
