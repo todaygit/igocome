@@ -6,7 +6,7 @@ import "./responsive.scss";
 
 const logo = require("./assets/img/page-1.png");
 
-export default class Header extends React.Component {
+export default class Header extends React.Component<{},any> {
   constructor(props) {
     super(props);
     this.state = {
