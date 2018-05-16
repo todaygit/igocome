@@ -13,6 +13,7 @@ export default class Header extends React.Component<{}, undefined> {
           <li>Contact</li>
           <li>About</li>
         </ul>
+        <i className="fa fa-bars" aria-hidden="true"></i>
         <button className="igo hvr-forward">iGoCome for Business</button>
       </div>
     );
