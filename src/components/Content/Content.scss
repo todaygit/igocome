@@ -35,7 +35,7 @@ div.content {
   .started {
     width: 140px;
     height: 44px;
-    background-color: rgb(215, 147, 0);
+    background-color: #efb107;
     color: white;
     border: none;
     outline-style: none;
@@ -43,7 +43,7 @@ div.content {
     transition-timing-function: ease-in-out;
 
     &:hover {
-      background-color: #efb107;
+      background-color: rgb(215, 147, 0);
     }
   }
 
