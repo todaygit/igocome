@@ -4,6 +4,10 @@
     flex-flow: column-reverse nowrap !important;
     align-items: stretch !important;
 
+    .menu {
+      transform: none !important;
+    }
+
     ul {
       flex-flow: column nowrap !important;
       padding: 0 !important;

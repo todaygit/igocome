@@ -4,6 +4,7 @@
   display: flex;
   flex-flow: row wrap;
   align-items: center;
+  border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
   position: fixed;
   top: 0;
   width: 100%;
@@ -17,6 +18,7 @@
     list-style: none;
     display: flex;
     flex-flow: row-reverse;
+    margin-bottom: 0;
 
     li {
       color: white;
@@ -34,7 +36,6 @@
   .igo {
     width: 210px;
     height: 44px;
-    // font-family: HelveticaNeue;
     font-size: 14px;
     font-weight: 500;
     font-style: normal;
@@ -43,9 +44,15 @@
     letter-spacing: normal;
     text-align: center;
     color: #fff;
-    background-color: #524fc3;
+    background-color: #16148c;
     border: none;
     margin: 20px;
     white-space: nowrap;
+    transition: 0.2s;
+    transition-timing-function: ease-in-out;
+
+    &:hover {
+      background-color: #524fc3;
+    }
   }
 }

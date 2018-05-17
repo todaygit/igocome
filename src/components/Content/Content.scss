@@ -35,10 +35,16 @@ div.content {
   .started {
     width: 140px;
     height: 44px;
-    background-color: #efb107;
+    background-color: rgb(215, 147, 0);
     color: white;
     border: none;
     outline-style: none;
+    transition: 0.2s;
+    transition-timing-function: ease-in-out;
+
+    &:hover {
+      background-color: #efb107;
+    }
   }
 
   .exp {

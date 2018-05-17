@@ -23,16 +23,18 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/16.2.0/umd/react-dom.production.min.js" integrity="sha256-9hrJxD4IQsWHdNpzLkJKYGiY/SEZFJJSUqyeZPNKd8g="
 	  crossorigin="anonymous"></script>
 	<script src="https://unpkg.com/material-ui@next/umd/material-ui.production.min.js" crossorigin="anonymous"></script>
-	<!--<script src="https://cdnjs.cloudflare.com/ajax/libs/skrollr/0.6.30/skrollr.min.js"></script>
-	<script type="text/javascript">
-		document.addEventListener("DOMContentLoaded", function (event) {
-			//do work
-			skrollr.init({
-				smoothScrolling: false,
-				mobileDeceleration: 0.004
-			});
-		});
-	</script>-->
-<script type="text/javascript" src="/js/bundle.4832c1cfc432da5c7dcb.min.js"></script></body>
+	<script>
+	// When the user scrolls down 20px from the top of the document, slide down the navbar
+	window.onscroll = function() {scrollFunction()};
+
+	function scrollFunction() {
+			if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+					document.getElementById("header").style.background = "rgba(4, 3, 51, 0.8)";
+			} else {
+					document.getElementById("header").style.background = "rgba(4, 3, 51, 0.2)";
+			}
+	}
+	</script>
+<script type="text/javascript" src="/js/bundle.a645cefb69d368661a01.min.js"></script></body>
 
 </html>
