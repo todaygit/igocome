@@ -6,6 +6,17 @@ import Menu, { MenuItem } from 'material-ui/Menu';
 import "./Header.scss";
 import "./responsive.scss";
 
+import ListItem from '@material-ui/core/ListItem';
+import ListItemIcon from '@material-ui/core/ListItemIcon';
+import ListItemText from '@material-ui/core/ListItemText';
+import InboxIcon from '@material-ui/icons/MoveToInbox';
+import DraftsIcon from '@material-ui/icons/Drafts';
+import StarIcon from '@material-ui/icons/Star';
+import SendIcon from '@material-ui/icons/Send';
+import MailIcon from '@material-ui/icons/Mail';
+import DeleteIcon from '@material-ui/icons/Delete';
+import ReportIcon from '@material-ui/icons/Report';
+
 const logo = require("./assets/img/page-1.png");
 const style = {
   transform: 'translateY(50px)'
@@ -29,12 +40,14 @@ export default class Header extends React.Component<{},any> {
   }
 
   handleClose() {
-    this.setState({ anchorEl: null });
+    setTimeout(() => {
+      this.setState({ anchorEl: null });
+    }, 350);
   }
   render() {
     const { anchorEl } = this.state;
     return (
-      <div className="header" id="header">
+      <div className={"header " + (this.state.anchorEl ? 'bgop' : '')} id="header">
         
         <img src={logo} width="108" height="54" />
         <ul className="menu">
@@ -50,17 +63,36 @@ export default class Header extends React.Component<{},any> {
         >
           <i className={"fa "+(this.state.anchorEl ? 'fa-close' : 'fa-bars')} aria-hidden="true"></i>
         </Button>
-        <Menu
+        <div
           id="simple-menu"
-          anchorEl={anchorEl}
-          open={Boolean(anchorEl)}
-          onClose={this.handleClose}
-          style={style}
+          style={{width : '100%', transition:'0.5s'}}
+          className={(this.state.anchorEl ? 'show' : 'hide')}
         >
-          <MenuItem onClick={this.handleClose}>Profile</MenuItem>
-          <MenuItem onClick={this.handleClose}>My account</MenuItem>
-          <MenuItem onClick={this.handleClose}>Logout</MenuItem>
-        </Menu>
+          <ListItem onClick={this.handleClose} button>
+            <ListItemIcon>
+              <InboxIcon />
+            </ListItemIcon>
+            <ListItemText primary="Inbox" />
+          </ListItem>
+          <ListItem onClick={this.handleClose} button>
+            <ListItemIcon>
+              <StarIcon />
+            </ListItemIcon>
+            <ListItemText primary="Starred" />
+          </ListItem>
+          <ListItem onClick={this.handleClose} button>
+            <ListItemIcon>
+              <SendIcon />
+            </ListItemIcon>
+            <ListItemText primary="Send mail" />
+          </ListItem>
+          <ListItem onClick={this.handleClose} button>
+            <ListItemIcon>
+              <DraftsIcon />
+            </ListItemIcon>
+            <ListItemText primary="Drafts" />
+          </ListItem>
+        </div>
       </div>
     );
   }
