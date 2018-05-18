@@ -16,6 +16,9 @@ import SendIcon from '@material-ui/icons/Send';
 import MailIcon from '@material-ui/icons/Mail';
 import DeleteIcon from '@material-ui/icons/Delete';
 import ReportIcon from '@material-ui/icons/Report';
+import SettingsIcon from '@material-ui/icons/Settings';
+import PersonIcon from '@material-ui/icons/Person';
+import ExitToAppIcon from '@material-ui/icons/ExitToApp';
 
 const logo = require("./assets/img/page-1.png");
 const style = {
@@ -68,27 +71,21 @@ export default class Header extends React.Component<{},any> {
         >
           <ListItem onClick={this.handleClose} button>
             <ListItemIcon>
-              <InboxIcon />
+              <PersonIcon />
             </ListItemIcon>
-            <ListItemText primary="Inbox" />
+            <ListItemText primary="My Profile" />
           </ListItem>
           <ListItem onClick={this.handleClose} button>
             <ListItemIcon>
-              <StarIcon />
+              <SettingsIcon />
             </ListItemIcon>
-            <ListItemText primary="Starred" />
+            <ListItemText primary="Settings" />
           </ListItem>
           <ListItem onClick={this.handleClose} button>
             <ListItemIcon>
-              <SendIcon />
+              <ExitToAppIcon />
             </ListItemIcon>
-            <ListItemText primary="Send mail" />
-          </ListItem>
-          <ListItem onClick={this.handleClose} button>
-            <ListItemIcon>
-              <DraftsIcon />
-            </ListItemIcon>
-            <ListItemText primary="Drafts" />
+            <ListItemText primary="Logout" />
           </ListItem>
         </div>
       </div>
