@@ -54,8 +54,8 @@ export default class Header extends React.Component<{},any> {
         
         <img src={logo} width="108" height="54" />
         <ul className="menu">
-          <li>Contact</li>
-          <li>About</li>
+          <li>Login</li>
+          <li>Register</li>
         </ul>
         <button className="igo">iGoCome for Business</button>
         <button
@@ -71,21 +71,15 @@ export default class Header extends React.Component<{},any> {
         >
           <ListItem onClick={this.handleClose} button>
             <ListItemIcon>
-              <PersonIcon />
-            </ListItemIcon>
-            <ListItemText primary="My Profile" />
-          </ListItem>
-          <ListItem onClick={this.handleClose} button>
-            <ListItemIcon>
-              <SettingsIcon />
-            </ListItemIcon>
-            <ListItemText primary="Settings" />
-          </ListItem>
-          <ListItem onClick={this.handleClose} button>
-            <ListItemIcon>
               <ExitToAppIcon />
             </ListItemIcon>
-            <ListItemText primary="Logout" />
+            <ListItemText primary="Login" />
+          </ListItem>
+          <ListItem onClick={this.handleClose} button>
+            <ListItemIcon>
+              <PersonIcon />
+            </ListItemIcon>
+            <ListItemText primary="Register" />
           </ListItem>
         </div>
       </div>
