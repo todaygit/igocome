@@ -55,14 +55,12 @@ export default class Header extends React.Component<{},any> {
           <li>About</li>
         </ul>
         <button className="igo">iGoCome for Business</button>
-        <Button
-          aria-owns={anchorEl ? 'simple-menu' : null}
-          aria-haspopup="true"
+        <button
           onClick={this.handleClick}
           className="bars"
         >
           <i className={"fa "+(this.state.anchorEl ? 'fa-close' : 'fa-bars')} aria-hidden="true"></i>
-        </Button>
+        </button>
         <div
           id="simple-menu"
           style={{width : '100%', transition:'0.5s'}}
