@@ -55,7 +55,8 @@ body {
       cursor: pointer;
 
       &:hover {
-        color: dodgerblue;
+        text-decoration: underline;
+        // color: dodgerblue;
       }
     }
   }
