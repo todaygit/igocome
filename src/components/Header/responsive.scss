@@ -17,5 +17,9 @@
   }
 }
 
-// @media only screen and (min-width: 992px) {}
+@media only screen and (min-width: 900px) {
+  #simple-menu {
+    display: none !important;
+  }
+}
 // @media only screen and (min-width: 1200px) {}
