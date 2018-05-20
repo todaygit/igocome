@@ -7,3 +7,9 @@
 ## Pull requests
 
 Use the Jira Issue id e.g. IGCU-34 in the PR comment with a brief description.  Please see .github/pull_request_template.md
+
+iGo UI with React.js Redux
+
+Live-Url for current dev status
+"http://igo-business.herokuapp.com/"
+

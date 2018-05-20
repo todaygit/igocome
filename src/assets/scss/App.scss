@@ -1,0 +1,85 @@
+$bg-color: yellow;
+$border-color: red;
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('../fonts/HelveticaNeue-01.ttf') format('truetype'); /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
+
+body {
+  padding: 0;
+  margin: 0;
+  background: burlywood;
+  background-color: #040333;
+  font-family: HelveticaNeue, serif;
+  font-size: 16px;
+}
+
+#bg {
+  background-image: url("../img/photos/900-1330-b-2-c-banner@2x.png");
+  background-position: top right;
+  background-size: cover;
+  position: fixed;
+  top: 0;
+  z-index: -5;
+  width: 100%;
+  min-height: 440px;
+  height: 57vh;
+
+  img {
+    height: 55vh;
+  }
+  // width: 100vw;
+  // height: 100vh;
+  // background-size: auto 100vh;
+  // background-position: top right 35%;
+}
+
+.app {
+  // font-family: helvetica, arial, sans-serif;
+  padding: 0;
+  margin: 0;
+  width: 100%;
+  border: none;
+  color: white;
+  // background-image: url("../img/photos/woman_wide_2.jpg");
+  background-repeat: no-repeat;
+  background-size: 1366px 550px;
+  background-position: top;
+
+  ul {
+    list-style-type: none;
+
+    li {
+      color: white;
+      cursor: pointer;
+
+      &:hover {
+        text-decoration: underline;
+        // color: dodgerblue;
+      }
+    }
+  }
+}
+
+::-webkit-scrollbar {
+  width: 2px;
+}
+
+/* Track */
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
