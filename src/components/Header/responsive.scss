@@ -1,0 +1,25 @@
+@media only screen and (max-width: 900px) {
+  .header {
+    justify-content: space-between;
+    flex-flow: row wrap !important;
+
+    .menu {
+      display: none !important;
+    }
+
+    .igo {
+      display: none !important;
+    }
+
+    .bars {
+      display: block !important;
+    }
+  }
+}
+
+@media only screen and (min-width: 900px) {
+  #simple-menu {
+    display: none !important;
+  }
+}
+// @media only screen and (min-width: 1200px) {}

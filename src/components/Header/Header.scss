@@ -1,0 +1,97 @@
+.header {
+  // min-height: 76px;
+  background-color: rgba(4, 3, 51, 0.2);
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 10px 0 10px 0;
+  z-index: 2;
+
+  img {
+    margin: auto 40px;
+  }
+
+  .menu {
+    flex: 1 2 auto;
+    list-style: none;
+    display: flex;
+    flex-flow: row-reverse;
+    margin-bottom: 0;
+
+    li {
+      color: white;
+      margin: auto 30px;
+      font-size: 14px;
+    }
+  }
+
+  .bars {
+    display: none;
+    font-size: 32px;
+    color: white;
+    cursor: pointer;
+    background: none;
+    border: none;
+    outline: none;
+    padding-right: 20px;
+  }
+
+  .igo {
+    width: 210px;
+    height: 44px;
+    font-size: 14px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+    background-color: #524fc3;
+    border: none;
+    margin: 20px;
+    white-space: nowrap;
+    transition: 0.2s;
+    transition-timing-function: ease-in-out;
+
+    &:hover {
+      background-color: #16148c;
+    }
+  }
+}
+
+.al-hidden {
+  display: none;
+  opacity: 0;
+}
+
+.bgop {
+  background: rgba(4, 3, 51, 0.8) !important;
+}
+
+#simple-menu {
+  color: white important;
+  // border-top: 1px rgba(255, 255, 255, 0.2) solid;
+
+  div[class^="MuiButtonBase"] {
+    border-left: 4px rgba(255, 255, 255, 0.2) solid;
+    transition-delay: 0.4s;
+
+    &:hover {
+      transform: translateX(4px);
+    }
+  }
+
+  h3 {
+    color: white !important;
+    font-size: 20px;
+  }
+
+  svg {
+    color: white !important;
+  }
+}

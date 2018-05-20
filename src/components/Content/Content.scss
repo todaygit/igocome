@@ -1,0 +1,99 @@
+div.content {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 75vh;
+  margin-top: 84px;
+  // background: rgba(231, 158, 0, 0.4);
+  // background-blend-mode: multiply;
+  // background-image: linear-gradient(rgba(231, 158, 0, 0.6), rgba(231, 158, 0, 0.3));
+
+  p {
+    text-align: center;
+  }
+
+  .title {
+    // font-family: FuturaStd;
+    font-size: 45px;
+    font-weight: normal;
+    font-style: oblique;
+    font-stretch: condensed;
+    line-height: 1.25;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+    margin-top: 80px;
+    margin-bottom: 25px;
+    transform: scale(1, 1.8);
+  }
+
+  .acc {
+    margin-top: 10px;
+    font-size: 14px !important;
+  }
+
+  .started {
+    width: 140px;
+    height: 44px;
+    font-size: 14px;
+    background-color: #efb107;
+    color: white;
+    border: none;
+    outline-style: none;
+    transition: 0.2s;
+    transition-timing-function: ease-in-out;
+
+    &:hover {
+      background-color: rgb(215, 147, 0);
+    }
+  }
+
+  .exp {
+    // margin-bottom: auto;
+    font-size: 14px;
+  }
+
+  .al-show {
+    width: 100%;
+    min-height: 240px;
+    background-color: #fff;
+    color: black;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+
+    .cont {
+      width: 300px;
+      margin: 12px 50px;
+      display: flex;
+      flex-flow: column nowrap;
+      align-items: center;
+      padding: 40px 2px;
+
+      .sub {
+        // font-family: HelveticaNeue;
+        font-size: 18px;
+        font-weight: bold;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #1d1d1d;
+      }
+
+      .content {
+        // font-family: HelveticaNeue;
+        font-size: 13px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.54;
+        letter-spacing: normal;
+        text-align: center;
+        color: #444;
+      }
+    }
+  }
+}

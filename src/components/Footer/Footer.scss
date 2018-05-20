@@ -1,0 +1,29 @@
+.footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  background: #040333;
+  padding-top: 10px;
+
+  .copyright {
+    color: gray;
+    margin: auto 32px;
+    font-size: 12px;
+  }
+
+  .menu {
+    flex: 2 2 auto;
+    display: flex;
+    justify-content: center;
+    margin: 20px 30px;
+    transform: translateX(-70px);
+    font-size: 12px;
+
+    li {
+      margin: auto 20px;
+    }
+  }
+}
