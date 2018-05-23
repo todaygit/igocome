@@ -1,4 +1,5 @@
 import * as React from "react";
+import { NavLink } from "react-router-dom";
 import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Button from 'material-ui/Button';
@@ -51,7 +52,10 @@ export default class Header extends React.Component<{},any> {
     const { anchorEl } = this.state;
     return (
       <div className={"header " + (this.state.anchorEl ? 'bgop' : '')} id="header">
-        
+        <div style={{ position: 'fixed', right: '0', top: '50%', display: 'flex', flexDirection:'column'}}>
+          <NavLink exact to='/'>Home</NavLink>
+          <NavLink exact to='/about'>About</NavLink>
+        </div>
         <img src={logo} width="108" height="54" />
         <ul className="menu">
           <li>Login</li>

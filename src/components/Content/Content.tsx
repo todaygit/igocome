@@ -1,4 +1,5 @@
 import * as React from "react";
+import { NavLink } from "react-router-dom";
 
 import "./Content.scss";
 import "./responsive.scss";
@@ -11,7 +12,9 @@ export default class Content extends React.Component<{}, undefined> {
       <div className="content">
         <h1 className="title">SEARCH ALL ROUTES AT ONCE</h1>
         <p className="acc">Find the best deals across all Providers in one location.</p>
-        <button className="started">Get Started</button>
+        <NavLink to='/about'>
+          <button className="started">Get Started</button>
+        </NavLink>
         <p className="exp">For the best experience, please use your mobile phone when searching the best deals.</p>
         <div className="al-show">
           <div className="cont no1">

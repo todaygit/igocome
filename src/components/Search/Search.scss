@@ -1,0 +1,111 @@
+$co-ma: 10px;
+
+.al-container {
+  padding-top: 105px;
+  background: url('../../assets/img/others/search.jpg');
+  background-size: cover;
+  min-height: 80vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+
+  .al-mode {
+    margin-top: 25px;
+    margin-bottom: 44px;
+
+    button {
+      color: #444;
+      width: 104px;
+      height: 44px;
+      border-radius: 22px;
+      background-color: transparent;
+      box-shadow: none;
+      font-size: 12px;
+      font-weight: bold;
+    }
+
+    .active {
+      background-color: #fff;
+      border: solid 3px #ecbd13;
+    }
+  }
+
+  .al-config {
+    background: url('../../assets/img/others/registration.png');
+    background-size: cover;
+  }
+}
+
+.al-card {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(247, 247, 247, 0.9);
+  color: #444;
+
+  h2 {
+    font-size: 16px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    margin-top: 20px;
+  }
+
+  .fa {
+    margin: auto 10px;
+    color: #ccc;
+  }
+}
+
+.al-column {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-end;
+  justify-content: space-evenly;
+}
+
+.al-comp {
+  .al-title {
+    margin: $co-ma;
+  }
+
+  .al-input {
+    background: white;
+    border: solid 1px #d5890a;
+    margin: $co-ma;
+    padding: 10px;
+
+    input {
+      background: transparent;
+      border: none;
+      outline: none;
+    }
+  }
+}
+
+.mark {
+  padding: 0 !important;
+}
+
+.searchbtn {
+  margin: 25px auto;
+
+  #search {
+    width: 170px;
+    height: 60px;
+    border-radius: 30px;
+    background-color: #efb107;
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+  }
+}
