@@ -34,6 +34,8 @@ $co-ma: 10px;
   .al-config {
     background: url('../../assets/img/others/registration.png');
     background-size: cover;
+    min-height: 220px;
+    max-width: 855px;
   }
 }
 
@@ -71,6 +73,15 @@ $co-ma: 10px;
 .al-comp {
   .al-title {
     margin: $co-ma;
+    font-size: 12px;
+  }
+
+  .al-num {
+    max-width: 100px;
+
+    input {
+      width: 80%;
+    }
   }
 
   .al-input {
@@ -78,6 +89,7 @@ $co-ma: 10px;
     border: solid 1px #d5890a;
     margin: $co-ma;
     padding: 10px;
+    height: 40px;
 
     input {
       background: transparent;
@@ -107,5 +119,6 @@ $co-ma: 10px;
     letter-spacing: normal;
     text-align: center;
     color: #fff;
+    margin: 25px auto;
   }
 }

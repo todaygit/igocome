@@ -66,11 +66,15 @@ export default class Search extends React.Component<{},any> {
               </div>
               <div className="al-comp">
                 <p className="al-title">Adults (18+)</p>
-                <div className="al-input"><input type="number" min="1"/></div>
+                <div className="al-input al-num">
+                  <input type="number" min="1"/>
+                </div>
               </div>
               <div className="al-comp">
                 <p className="al-title">Children (0-17)</p>
-                <div className="al-input"><input type="number" min="0"/></div>
+                <div className="al-input al-num">
+                  <input type="number" min="0"/>
+                </div>
               </div>
             </div>
           </div>
