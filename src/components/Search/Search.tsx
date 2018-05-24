@@ -23,7 +23,7 @@ export default class Search extends React.Component<{},any> {
       return: '',
       adults: 1,
       childrens: 0,
-      result: false
+      result: true
     }
   }
   handleChange_one = () => this.setState({mode: "oneway"})
@@ -34,17 +34,19 @@ export default class Search extends React.Component<{},any> {
       <div className="al-container">
         <h4>{JSON.stringify(this.state)}</h4>
         <div className="al-card">
-          <h2>Select your Search Criteria</h2>
-          <div className="al-mode">
-            <Button variant="raised" color="primary" className={this.state.mode === 'oneway' ? 'active' : ''} onClick={this.handleChange_one}>
-              ONE WAY
-            </Button>
-            <Button variant="raised" color="primary" className={this.state.mode === 'return' ? 'active' : ''} onClick={this.handleChange_return}>
-              RETURN
-            </Button>
-            <Button variant="raised" color="primary" className={this.state.mode === 'multi' ? 'active' : ''} onClick={this.handleChange_multi}>
-              MULTI-CITY
-            </Button>
+          <div>
+            <h2>Select your Search Criteria</h2>
+            <div className="al-mode">
+              <Button variant="raised" color="primary" className={this.state.mode === 'oneway' ? 'active' : ''} onClick={this.handleChange_one}>
+                ONE WAY
+              </Button>
+              <Button variant="raised" color="primary" className={this.state.mode === 'return' ? 'active' : ''} onClick={this.handleChange_return}>
+                RETURN
+              </Button>
+              <Button variant="raised" color="primary" className={this.state.mode === 'multi' ? 'active' : ''} onClick={this.handleChange_multi}>
+                MULTI-CITY
+              </Button>
+            </div>
           </div>
           <div className="al-config">
             <div className="al-column al-1">

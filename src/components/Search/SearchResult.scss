@@ -1,20 +1,178 @@
 .al-content {
   display: flex;
   flex-flow: row nowrap;
+  justify-content: center;
 }
 
 .al-right {
-  .al-title {
-    color: red;
+  .r-title {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    margin-bottom: -10px;
+    margin-top: 5px;
+
+    h3 {
+      font-size: 14px;
+      font-weight: normal;
+      font-style: normal;
+      font-stretch: normal;
+      line-height: 1.14;
+      letter-spacing: normal;
+      color: #16148c;
+    }
+  }
+
+  .r-content {
+    .al-row {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: center;
+      width: 260px;
+      margin-bottom: -15px;
+
+      p {
+        margin: 0;
+        font-size: 12px;
+        color: #777;
+
+        &.val {
+          color: rgba(0, 0, 0, 0.86);
+        }
+
+        &.grow {
+          flex: 2;
+        }
+      }
+
+      input {
+        margin: 0;
+      }
+    }
+  }
+}
+
+.al-left {
+  flex: 2;
+  padding-top: 20px;
+  max-width: 750px;
+
+  .sort-type {
+    width: 100%;
+    display: flex;
+    flex-flow: row-reverse nowrap;
+    padding-right: 25px;
+
+    select {
+      width: 249px;
+      height: 44px;
+      border-radius: 5px;
+      background-color: #eee;
+      border: solid 1px #bbb;
+      padding-right: 15px;
+    }
+  }
+
+  .transport {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    padding: 20px;
+    margin: 25px;
+    border-radius: 3px;
+    background-color: #fff;
+    box-shadow: 0 0 1px 1px rgba(31, 31, 31, 0.04), 0 1px 0 0 #ddd;
+
+    .times {
+      h4 {
+        font-size: 20px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.4;
+        letter-spacing: normal;
+        color: #000;
+      }
+
+      p {
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #888;
+      }
+    }
+
+    .duration {
+      h4 {
+        font-size: 20px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: 1.4;
+        letter-spacing: normal;
+        color: #000;
+      }
+
+      p {
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #888;
+      }
+    }
+
+    .cost {
+      h4 {
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      p {
+        font-size: 12px;
+        font-weight: normal;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #888;
+      }
+    }
+
+    .select {
+      button {
+        width: 118px;
+        height: 40px;
+        background-color: #1662d2;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        text-align: center;
+        color: #fff;
+        border: none;
+      }
+    }
   }
 }
 
 .res-container {
-  background-color: rgba(216, 216, 216, 1);
+  background-color: #f5f5f5;
   color: rgba(0, 0, 0, 0.86);
   padding: 30px;
 
   .al-header {
+    max-width: 1024px;
+    margin: auto;
+    margin-bottom: 30px;
+
     .al-1 {
       display: flex;
       flex-flow: row nowrap;
@@ -22,24 +180,26 @@
 
       h1 {
         font-size: 24px;
-        font-weight: 500;
         font-style: normal;
         font-stretch: normal;
         line-height: normal;
         letter-spacing: normal;
         color: #16148c;
+        font-weight: bold;
+        margin-right: 20px;
       }
 
       .al-date {
         opacity: 0.7;
         font-size: 14px;
-        font-weight: 500;
         font-style: normal;
         font-stretch: normal;
         line-height: normal;
+        font-weight: bold;
         letter-spacing: normal;
         color: #16148c;
       }
     }
   }
 }
+
