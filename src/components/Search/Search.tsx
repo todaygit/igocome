@@ -4,13 +4,22 @@ import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
 import "./Search.scss";
-var returnpng = require("./return.png");
+var returnpng = require("./assets/return.png");
+
+import * as ReactAutocomplete from "react-autocomplete";
+import { cities } from "./locations.js";
 
 export default class Search extends React.Component<{},any> {
   constructor(props) {
     super(props);
     this.state = {
-      mode: "oneway"
+      mode: "oneway",
+      from: '',
+      to: '',
+      departure: '',
+      return: '',
+      adults: 1,
+      childrens: 0,
     }
   }
   handleChange_one = () => this.setState({mode: "oneway"})
@@ -19,6 +28,7 @@ export default class Search extends React.Component<{},any> {
   render() {
     return (
       <div className="al-container">
+        <h4>{JSON.stringify(this.state)}</h4>
         <div className="al-card">
           <h2>Select your Search Criteria</h2>
           <div className="al-mode">
@@ -37,9 +47,21 @@ export default class Search extends React.Component<{},any> {
               <div className="al-comp">
                 <p className="al-title">Leaving From</p>
                 <div className="al-input">
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>
-                  <input/>
-                  <i className="fa fa-times" aria-hidden="true"></i>
+                  <i style={{color: this.state.from ? 'dodgerblue' : '#ccc'}} className="fa fa-map-marker" aria-hidden="true"></i>
+                  <ReactAutocomplete
+                    items={cities}
+                    shouldItemRender={(item, value) => item.city.toLowerCase().indexOf(value.toLowerCase()) > -1}
+                    getItemValue={item => item.city}
+                    renderItem={(item, highlighted) =>
+                      <div key={item.country} style={{ backgroundColor: highlighted ? '#eee' : 'transparent' }}>
+                        {item.city}
+                      </div>
+                    }
+                    value={this.state.from}
+                    onChange={e => this.setState({ from: e.target.value })}
+                    onSelect={value => this.setState({ from: value })}
+                  />
+                  <i onClick={e => this.setState({ from: '' })} style={{opacity: this.state.from ? 1 : 0}} className="fa fa-times" aria-hidden="true"></i>
                 </div>
               </div>
               <div className="al-comp">
@@ -49,31 +71,52 @@ export default class Search extends React.Component<{},any> {
               <div className="al-comp">
                 <p className="al-title">Going to</p>
                 <div className="al-input">
-                  <i className="fa fa-map-marker" aria-hidden="true"></i>
-                  <input/>
-                  <i className="fa fa-times" aria-hidden="true"></i>
+                  <i style={{ color: this.state.to ? 'dodgerblue' : '#ccc' }} className="fa fa-map-marker" aria-hidden="true"></i>
+                  <ReactAutocomplete
+                    items={cities}
+                    shouldItemRender={(item, value) => item.city.toLowerCase().indexOf(value.toLowerCase()) > -1}
+                    getItemValue={item => item.city}
+                    renderItem={(item, highlighted) =>
+                      <div
+                        key={item.country}
+                        style={{ backgroundColor: highlighted ? '#eee' : 'transparent' }}
+                      >
+                        {item.city}
+                      </div>
+                    }
+                    value={this.state.to}
+                    onChange={e => this.setState({ to: e.target.value })}
+                    onSelect={value => this.setState({ to: value })}
+                  />
+                  <i onClick={e => this.setState({ to: '' })} style={{ opacity: this.state.to ? 1 : 0 }} className="fa fa-times" aria-hidden="true"></i>
                 </div>
               </div>
             </div>
             <div className="al-column al-2">
               <div className="al-comp">
                 <p className="al-title">Departure Date</p>
-                <div className="al-input"><i className="fa fa-calendar-minus-o" aria-hidden="true"></i><input type="date" /></div>
+                <div className="al-input">
+                  <i style={{ color: this.state.departure ? 'dodgerblue' : '#ccc' }} className="fa fa-calendar-minus-o" aria-hidden="true"></i>
+                  <input onChange={e => this.setState({ departure: e.target.value })} value={this.state.departure} type="date" />
+                </div>
               </div>
-              <div className="al-comp">
+              <div className="al-comp" style={{display: this.state.mode=='return' ? 'none' : 'block'}}>
                 <p className="al-title">Return Date</p>
-                <div className="al-input"><i className="fa fa-calendar-check-o" aria-hidden="true"></i><input type="date" /></div>
+                <div className="al-input">
+                  <i style={{ color: this.state.return ? 'dodgerblue' : '#ccc' }} className="fa fa-calendar-check-o" aria-hidden="true"></i>
+                  <input onChange={e => this.setState({return: e.target.value})} value={this.state.return} type="date" />
+                </div>
               </div>
               <div className="al-comp">
                 <p className="al-title">Adults (18+)</p>
                 <div className="al-input al-num">
-                  <input type="number" min="1"/>
+                  <input value={this.state.adults} onChange={e => this.setState({adults: e.target.value})} type="number" min="1"/>
                 </div>
               </div>
               <div className="al-comp">
                 <p className="al-title">Children (0-17)</p>
                 <div className="al-input al-num">
-                  <input type="number" min="0"/>
+                  <input value={this.state.childrens} onChange={e => this.setState({ childrens: e.target.value })} type="number" min="0"/>
                 </div>
               </div>
             </div>
