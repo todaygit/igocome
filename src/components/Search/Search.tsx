@@ -3,23 +3,27 @@ import PropTypes from 'prop-types';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import LocationOnIcon from '@material-ui/icons/LocationOn';
+
+import SearchResult from "./SearchResult";
+
 import "./Search.scss";
 var returnpng = require("./assets/return.png");
 
 import * as ReactAutocomplete from "react-autocomplete";
-import { cities } from "./locations.js";
+import { cities } from "./assets/locations.js";
 
 export default class Search extends React.Component<{},any> {
   constructor(props) {
     super(props);
     this.state = {
-      mode: "oneway",
+      mode: "return",
       from: '',
       to: '',
       departure: '',
       return: '',
       adults: 1,
       childrens: 0,
+      result: false
     }
   }
   handleChange_one = () => this.setState({mode: "oneway"})
@@ -100,7 +104,7 @@ export default class Search extends React.Component<{},any> {
                   <input onChange={e => this.setState({ departure: e.target.value })} value={this.state.departure} type="date" />
                 </div>
               </div>
-              <div className="al-comp" style={{display: this.state.mode=='return' ? 'none' : 'block'}}>
+              <div className="al-comp" style={{display: this.state.mode=='oneway' ? 'none' : 'block'}}>
                 <p className="al-title">Return Date</p>
                 <div className="al-input">
                   <i style={{ color: this.state.return ? 'dodgerblue' : '#ccc' }} className="fa fa-calendar-check-o" aria-hidden="true"></i>
@@ -122,10 +126,13 @@ export default class Search extends React.Component<{},any> {
             </div>
           </div>
           <div className="searchbtn">
-            <Button variant="raised" color="primary" id="search">
+            <Button variant="raised" color="primary" id="search" onClick={e => this.setState({result: !this.state.result})}>
               SEARCH
             </Button>
           </div>
+        </div>
+        <div className="result" style={{display: this.state.result ? 'block' : 'none'}}>
+          <SearchResult />
         </div>
       </div>
     )

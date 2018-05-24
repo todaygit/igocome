@@ -1,0 +1,45 @@
+.al-content {
+  display: flex;
+  flex-flow: row nowrap;
+}
+
+.al-right {
+  .al-title {
+    color: red;
+  }
+}
+
+.res-container {
+  background-color: rgba(216, 216, 216, 1);
+  color: rgba(0, 0, 0, 0.86);
+  padding: 30px;
+
+  .al-header {
+    .al-1 {
+      display: flex;
+      flex-flow: row nowrap;
+      align-items: flex-end;
+
+      h1 {
+        font-size: 24px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #16148c;
+      }
+
+      .al-date {
+        opacity: 0.7;
+        font-size: 14px;
+        font-weight: 500;
+        font-style: normal;
+        font-stretch: normal;
+        line-height: normal;
+        letter-spacing: normal;
+        color: #16148c;
+      }
+    }
+  }
+}
