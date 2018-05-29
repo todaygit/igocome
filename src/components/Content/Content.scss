@@ -4,7 +4,7 @@ div.content {
   justify-content: space-between;
   align-items: center;
   min-height: 75vh;
-  margin-top: 84px;
+  padding-top: 80px;
   // background: rgba(231, 158, 0, 0.4);
   // background-blend-mode: multiply;
   // background-image: linear-gradient(rgba(231, 158, 0, 0.6), rgba(231, 158, 0, 0.3));
@@ -15,7 +15,8 @@ div.content {
 
   .title {
     // font-family: FuturaStd;
-    font-size: 45px;
+    font-family: 'Barlow Condensed', sans-serif;
+    font-size: 40px;
     font-weight: normal;
     font-style: oblique;
     font-stretch: condensed;
@@ -23,29 +24,63 @@ div.content {
     letter-spacing: normal;
     text-align: center;
     color: #fff;
-    margin-top: 80px;
-    margin-bottom: 25px;
-    transform: scale(1, 1.8);
+    padding-top: 50px;
+    margin-top: 0;
+    margin-bottom: 10px;
   }
 
   .acc {
-    margin-top: 10px;
+    margin-bottom: 70px;
     font-size: 14px !important;
   }
 
   .started {
-    width: 140px;
-    height: 44px;
-    font-size: 14px;
-    background-color: #efb107;
-    color: white;
+    width: 272px;
+    height: 50px;
+    background-color: rgba(255, 255, 255, 0.8);
     border: none;
     outline-style: none;
+    // font-family: HelveticaNeue;
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.53;
+    letter-spacing: normal;
+    text-align: center;
+    color: #b57100;
     transition: 0.2s;
     transition-timing-function: ease-in-out;
+    margin-bottom: 20px;
+    opacity: 0.8;
 
     &:hover {
-      background-color: rgb(215, 147, 0);
+      opacity: 1;
+    }
+  }
+
+  .register {
+    width: 272px;
+    height: 50px;
+    border: solid 2px #fff;
+    background: transparent;
+    outline-style: none;
+    // font-family: HelveticaNeue;
+    font-size: 15px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    text-align: center;
+    color: #fff;
+    opacity: 0.8;
+    transition: 0.2s;
+    transition-timing-function: ease-in-out;
+    margin-bottom: 65px;
+
+    &:hover {
+      opacity: 1;
     }
   }
 

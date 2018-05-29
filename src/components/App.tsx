@@ -24,12 +24,11 @@ export default class App extends React.Component<AppProps, undefined> {
     }
     render() {
         return (
-            <div className="app">
-                
+            <div className="app">            
                 <Header/>
                 <Route exact path='/' component={Bg}/>
-                <Route exact path='/about' component={Content}/>
-                <Route exact path='/' component={Search}/>
+                <Route exact path='/' component={Content}/>
+                <Route exact path='/search' component={Search}/>
                 <Footer />
             </div>
         );

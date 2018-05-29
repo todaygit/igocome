@@ -16,15 +16,16 @@ body {
 }
 
 #bg {
-  background-image: url("../img/photos/900-1330-b-2-c-banner@2x.png");
-  background-position: top right;
-  background-size: cover;
+  background-image: url("../img/photos/900-1330-b-2-c-banner.png");
+  background-position: top right !important;
+  background-size: auto 440px;
   position: fixed;
   top: 0;
   z-index: -5;
   width: 100%;
   min-height: 440px;
-  height: 57vh;
+  // height: 57vh;
+  height: 440px !important;
 
   img {
     height: 55vh;

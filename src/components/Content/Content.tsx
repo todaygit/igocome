@@ -10,12 +10,18 @@ export default class Content extends React.Component<{}, undefined> {
   render() {
     return (
       <div className="content">
-        <h1 className="title">SEARCH ALL ROUTES AT ONCE</h1>
-        <p className="acc">Find the best deals across all Providers in one location.</p>
-        <NavLink to='/about'>
-          <button className="started">Get Started</button>
-        </NavLink>
-        <p className="exp">For the best experience, please use your mobile phone when searching the best deals.</p>
+        <div style={{width:'100%',maxHeight:'360px'}}>
+          <h1 className="title">SEARCH ALL ROUTES AT ONCE</h1>
+          <p className="acc">Find the best deals across all Providers in one location.</p>
+          <div style={{display:'flex',flexFlow:'column nowrap',justifyContent:'flex-start',alignItems:'center'}}>
+            <NavLink to='/search'>
+              <button className="started">Get Started</button>
+            </NavLink>
+            <NavLink to='/search'>
+              <button className="register">Register for a free account</button>
+            </NavLink>
+          </div>
+        </div>
         <div className="al-show">
           <div className="cont no1">
             <img src={ruby} alt="ruby" />

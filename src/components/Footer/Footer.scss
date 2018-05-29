@@ -6,7 +6,7 @@
   flex-flow: row nowrap;
   align-items: center;
   background: #040333;
-  padding-top: 10px;
+  padding: 0;
 
   .copyright {
     color: gray;
@@ -21,6 +21,7 @@
     margin: 20px 30px;
     transform: translateX(-70px);
     font-size: 12px;
+    align-items: center;
 
     li {
       margin: auto 20px;

@@ -1,14 +1,14 @@
 @media screen and (max-width: 50000px) {
   #bg {
     background-position: center !important;
-    height: 65vh !important;
+    // height: 65vh !important;
   }
 }
 
 @media screen and (min-width: 1800px) {
   div.al-show {
-    position: fixed !important;
-    top: 60vh !important;
+    // position: fixed !important;
+    // top: 60vh !important;
   }
 
   div.content {
@@ -18,7 +18,7 @@
 
 @media screen and (max-width: 1800px) {
   #bg {
-    height: 55vh !important;
+    // height: 55vh !important;
   }
 
   div.al-show {
@@ -32,7 +32,7 @@
 
 @media screen and (max-width: 1200px) {
   #bg {
-    background-image: url("../img/photos/900-1330-b-2-c-banner@2x.png") !important;
+    background-image: url("../img/photos/900-1330-b-2-c-banner@3x.png") !important;
     height: 55vh !important;
   }
 
@@ -64,7 +64,7 @@
 
   div.content {
     .started {
-      margin-top: 20px !important;
+      // margin-top: 20px !important;
     }
   }
 
@@ -99,8 +99,8 @@
   }
 
   div.content .started {
-    margin-top: 3em !important;
-    margin-bottom: 3em !important;
+    // margin-top: 3em !important;
+    // margin-bottom: 3em !important;
     font-size: 13px;
   }
 }
