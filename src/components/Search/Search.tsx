@@ -23,7 +23,7 @@ export default class Search extends React.Component<{},any> {
       return: '',
       adults: 1,
       childrens: 0,
-      result: true
+      result: false
     }
   }
   handleChange_one = () => this.setState({mode: "oneway"})
@@ -32,7 +32,7 @@ export default class Search extends React.Component<{},any> {
   render() {
     return (
       <div className="al-container">
-        <h4>{JSON.stringify(this.state)}</h4>
+        {/* <h4>{JSON.stringify(this.state)}</h4> */}
         <div className="al-card">
           <div>
             <h2>Select your Search Criteria</h2>
