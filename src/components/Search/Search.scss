@@ -1,4 +1,11 @@
 $co-ma: 10px;
+$result-title: #37366d;
+
+@font-face {
+  font-family: 'HelveticaNeue';
+  src: url('../../assets/fonts/HelveticaNeue-01.ttf') format('truetype');
+  /* Chrome 4+, Firefox 3.5, Opera 10+, Safari 3—5 */
+}
 
 .al-container {
   background: url('../../assets/img/others/search.jpg');
@@ -47,15 +54,16 @@ $co-ma: 10px;
   width: 100%;
 
   h2 {
-    font-family: Barlow, serif;
+    font-family: 'Barlow Condensed', sans-serif;
     font-size: 27px;
     font-weight: 500;
     font-style: italic;
     font-stretch: condensed;
+    text-transform: uppercase;
     line-height: 1.26;
     letter-spacing: normal;
     color: #fff;
-    margin-top: 20px;
+    margin-top: 30px;
     text-align: left;
   }
 
@@ -114,7 +122,7 @@ $co-ma: 10px;
 
     .fa-times {
       &:hover {
-        color: dodgerblue;
+        color: $result-title;
         transition-delay: 0.3s;
         transition-timing-function: ease-in-out;
       }
@@ -143,6 +151,9 @@ $co-ma: 10px;
 
 .al-2 {
   align-items: flex-start;
+  padding-left: 40px;
+  padding-right: 40px;
+  flex-wrap: wrap;
 }
 
 .al-searchbtn {
@@ -163,28 +174,39 @@ $co-ma: 10px;
   margin: $co-ma;
 }
 
-div[class^='MuiFormGroup'] {
-  flex-flow: row nowrap;
+// div[class^='MuiFormGroup'] {
+//   flex-flow: row nowrap;
 
-  label {
-    margin-right: 45px;
+//   label {
+//     margin-right: 45px;
+//   }
+// }
+
+// span[class^='MuiRadio'] {
+//   color: #37366d;
+// }
+
+.al-top {
+  div[role="radiogroup"] {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+  span {
+    font-family: HelveticaNeue, serif;
+    font-size: 18px;
+    font-weight: 500;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.33;
+    letter-spacing: normal;
+    // color: #1662d2;
+    color: #794b01;
+  }
+  input[type="radio"] {
+    color: #1662d2;
   }
 }
 
-span[class^='MuiRadio'] {
-  color: #37366d;
-}
-
-span[class^='MuiTypography'] {
-  font-family: HelveticaNeue, serif;
-  font-size: 18px;
-  font-weight: 500;
-  font-style: normal;
-  font-stretch: normal;
-  line-height: 1.33;
-  letter-spacing: normal;
-  color: #794b01;
-}
 
 .al-again {
   display: flex;
@@ -198,4 +220,7 @@ span[class^='MuiTypography'] {
 
 .al-comp.al-num {
   flex: 0.5;
+}
+.al-comp .al-input input {
+  flex: 2;
 }

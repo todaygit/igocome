@@ -26,13 +26,14 @@
   }
 
   h1.title {
-    font-size: 35px !important;
+    font-size: 40px !important;
   }
 }
 
 @media screen and (max-width: 1200px) {
   #bg {
     background-image: url("../img/photos/900-1330-b-2-c-banner.png") !important;
+    background-position: top right !important;
     height: 55vh !important;
   }
 
@@ -47,7 +48,7 @@
   }
 
   h1.title {
-    font-size: 35px !important;
+    font-size: 40px !important;
   }
 }
 
@@ -59,7 +60,7 @@
   }
 
   div.content .title {
-    font-size: 25px !important;
+    font-size: 30px !important;
   }
 
   div.content {
@@ -69,7 +70,7 @@
   }
 
   div.al-show {
-    flex-flow: column nowrap !important;
+    flex-flow: row wrap !important;
     align-items: center !important;
 
     h3.sub {
@@ -86,7 +87,7 @@
 
 @media screen and (max-width: 600px) {
   div.content .title {
-    font-size: 17px !important;
+    font-size: 30px !important;
   }
 
   #bg {
@@ -102,5 +103,28 @@
     // margin-top: 3em !important;
     // margin-bottom: 3em !important;
     font-size: 13px;
+  }
+
+  .footer {
+    position: static !important;
+    flex-flow: column-reverse nowrap !important;
+    align-items: stretch !important;
+    .menu {
+      transform: none !important;
+    }
+
+    .copyright {
+      padding-bottom: 30px !important;
+    }
+    
+    ul {
+      flex-flow: column nowrap !important;
+      padding: 0 !important;
+      margin: 20px auto !important;
+      li {
+        margin: 12px 0 !important;
+      }
+    }
+    
   }
 }

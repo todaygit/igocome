@@ -1,3 +1,5 @@
+$result-title: #37366d;
+
 .al-content {
   display: flex;
   flex-flow: row nowrap;
@@ -19,7 +21,7 @@
       font-stretch: normal;
       line-height: 1.14;
       letter-spacing: normal;
-      color: #16148c;
+      color: $result_title;
     }
   }
 
@@ -184,7 +186,7 @@
         font-stretch: normal;
         line-height: normal;
         letter-spacing: normal;
-        color: #16148c;
+        color: $result_title;
         font-weight: bold;
         margin-right: 20px;
       }
@@ -197,7 +199,7 @@
         line-height: normal;
         font-weight: bold;
         letter-spacing: normal;
-        color: #16148c;
+        color: $result-title;
       }
     }
   }

@@ -38,7 +38,7 @@ export default class Search extends React.Component<{},any> {
   render() {
     return (
       <div className="al-container">
-        <h4 style={{position:'fixed'}}>{JSON.stringify(this.state)}</h4>
+        {/* <h4 style={{position:'fixed'}}>{JSON.stringify(this.state)}</h4> */}
         <div className="al-card">
           <div className="al-config">
             <div className="al-top">
@@ -63,7 +63,7 @@ export default class Search extends React.Component<{},any> {
                 <div className="al-comp">
                   <p className="al-title">Leaving From</p>
                   <div className="al-input">
-                    <i style={{color: this.state.from ? 'dodgerblue' : '#ccc'}} className="fa fa-map-marker" aria-hidden="true"></i>
+                    <i style={{color: this.state.from ? '#37366d' : '#ccc'}} className="fa fa-map-marker" aria-hidden="true"></i>
                     <ReactAutocomplete
                       items={cities}
                       shouldItemRender={(item, value) => item.city.toLowerCase().indexOf(value.toLowerCase()) > -1}
@@ -87,7 +87,7 @@ export default class Search extends React.Component<{},any> {
                 <div className="al-comp">
                   <p className="al-title">Going to</p>
                   <div className="al-input">
-                    <i style={{ color: this.state.to ? 'dodgerblue' : '#ccc' }} className="fa fa-map-marker" aria-hidden="true"></i>
+                    <i style={{ color: this.state.to ? '#37366d' : '#ccc' }} className="fa fa-map-marker" aria-hidden="true"></i>
                     <ReactAutocomplete
                       items={cities}
                       shouldItemRender={(item, value) => item.city.toLowerCase().indexOf(value.toLowerCase()) > -1}
@@ -112,27 +112,29 @@ export default class Search extends React.Component<{},any> {
                 <div className="al-comp al-date">
                   <p className="al-title">Departure Date</p>
                   <div className="al-input">
-                    <i style={{ color: this.state.departure ? 'dodgerblue' : '#ccc' }} className="fa fa-calendar-minus-o" aria-hidden="true"></i>
+                    <i style={{ color: this.state.departure ? '#37366d' : '#ccc' }} className="fa fa-calendar-minus-o" aria-hidden="true"></i>
                     <input onChange={e => this.setState({ departure: e.target.value })} value={this.state.departure} type="date" />
                   </div>
                 </div>
                 <div className="al-comp al-date" style={{display: this.state.mode=='oneway' ? 'none' : 'block'}}>
                   <p className="al-title">Return Date</p>
                   <div className="al-input">
-                    <i style={{ color: this.state.return ? 'dodgerblue' : '#ccc' }} className="fa fa-calendar-check-o" aria-hidden="true"></i>
+                    <i style={{ color: this.state.return ? '#37366d' : '#ccc' }} className="fa fa-calendar-check-o" aria-hidden="true"></i>
                     <input onChange={e => this.setState({return: e.target.value})} value={this.state.return} type="date" />
                   </div>
                 </div>
-                <div className={"al-comp al-num " + (this.state.result ? 'hide' : 'show')}>
-                  <p className="al-title">Adults (18+)</p>
-                  <div className="al-input al-num ">
-                    <input value={this.state.adults} onChange={e => this.setState({adults: e.target.value})} type="number" min="1"/>
+                <div style={{display:'flex'}}>
+                  <div className={"al-comp al-num " + (this.state.result ? 'hide' : 'show')}>
+                    <p className="al-title">Adults (18+)</p>
+                    <div className="al-input al-num ">
+                      <input value={this.state.adults} onChange={e => this.setState({adults: e.target.value})} type="number" min="1"/>
+                    </div>
                   </div>
-                </div>
-                <div className={"al-comp al-num " + (this.state.result ? 'hide' : 'show')}>
-                  <p className="al-title">Children (0-17)</p>
-                  <div className="al-input al-num">
-                    <input value={this.state.childrens} onChange={e => this.setState({ childrens: e.target.value })} type="number" min="0"/>
+                  <div className={"al-comp al-num " + (this.state.result ? 'hide' : 'show')}>
+                    <p className="al-title">Children (0-17)</p>
+                    <div className="al-input al-num">
+                      <input value={this.state.childrens} onChange={e => this.setState({ childrens: e.target.value })} type="number" min="0"/>
+                    </div>
                   </div>
                 </div>
                 <div className="al-comp al-searchbtn">
