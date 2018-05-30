@@ -26,9 +26,9 @@ export default class App extends React.Component<AppProps, undefined> {
         return (
             <div className="app">            
                 <Header/>
-                <Route exact path='/' component={Bg}/>
-                <Route exact path='/' component={Content}/>
-                <Route exact path='/search' component={Search}/>
+                <Route exact path='/search' component={Bg}/>
+                <Route exact path='/search' component={Content}/>
+                <Route exact path='/' component={Search}/>
                 <Footer />
             </div>
         );
