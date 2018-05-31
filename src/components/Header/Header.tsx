@@ -52,10 +52,10 @@ export default class Header extends React.Component<{},any> {
     const { anchorEl } = this.state;
     return (
       <div className={"header " + (this.state.anchorEl ? 'bgop' : '')} id="header">
-        <div style={{ position: 'fixed', right: '0', top: '50%', display: 'flex', flexDirection:'column'}}>
+        {/* <div style={{ position: 'fixed', right: '0', top: '50%', display: 'flex', flexDirection:'column'}}>
           <NavLink exact to='/'>Home</NavLink>
           <NavLink exact to='/search'>Search</NavLink>
-        </div>
+        </div> */}
         <img src={logo} width="108" height="54" />
         <ul className="menu">
           <li>Login</li>
