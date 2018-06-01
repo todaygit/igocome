@@ -58,8 +58,8 @@ export default class Search extends React.Component<{},any> {
                 </FormControl>
               </div>
             </div>
-            <div style={{display: this.state.result ? 'flex' : 'block'}}>
-              <div className="al-column al-1">
+            <div className={"al-inputs"} style={{display: this.state.result ? 'flex' : 'block'}}>
+              <div className="al-places al-column al-1">
                 <div className="al-comp">
                   <p className="al-title">Leaving From</p>
                   <div className="al-input">
@@ -108,38 +108,42 @@ export default class Search extends React.Component<{},any> {
                   </div>
                 </div>
               </div>
-              <div className="al-column al-2">
-                <div className="al-comp al-date">
-                  <p className="al-title">Departure Date</p>
-                  <div className="al-input">
-                    <i style={{ color: this.state.departure ? '#37366d' : '#ccc' }} className="fa fa-calendar-minus-o" aria-hidden="true"></i>
-                    <input onChange={e => this.setState({ departure: e.target.value })} value={this.state.departure} type="date" />
-                  </div>
-                </div>
-                <div className="al-comp al-date" style={{display: this.state.mode=='oneway' ? 'none' : 'block'}}>
-                  <p className="al-title">Return Date</p>
-                  <div className="al-input">
-                    <i style={{ color: this.state.return ? '#37366d' : '#ccc' }} className="fa fa-calendar-check-o" aria-hidden="true"></i>
-                    <input onChange={e => this.setState({return: e.target.value})} value={this.state.return} type="date" />
-                  </div>
-                </div>
-                <div style={{display:'flex'}}>
-                  <div className={"al-comp al-num " + (this.state.result ? 'hide' : 'show')}>
-                    <p className="al-title">Adults (18+)</p>
-                    <div className="al-input al-num ">
-                      <input value={this.state.adults} onChange={e => this.setState({adults: e.target.value})} type="number" min="1"/>
+              <div className="al-others">
+                <div className="al-dandn al-column al-2">
+                  <div className="al-dates">
+                    <div className="al-comp al-date">
+                      <p className="al-title">Departure Date</p>
+                      <div className="al-input al-date">
+                        <i style={{ color: this.state.departure ? '#37366d' : '#ccc' }} className="fa fa-calendar-minus-o" aria-hidden="true"></i>
+                        <input onChange={e => this.setState({ departure: e.target.value })} value={this.state.departure} type="date" />
+                      </div>
+                    </div>
+                    <div className="al-comp al-date" style={{display: this.state.mode=='oneway' ? 'none' : 'block'}}>
+                      <p className="al-title">Return Date</p>
+                      <div className="al-input al-date">
+                        <i style={{ color: this.state.return ? '#37366d' : '#ccc' }} className="fa fa-calendar-check-o" aria-hidden="true"></i>
+                        <input onChange={e => this.setState({return: e.target.value})} value={this.state.return} type="date" />
+                      </div>
                     </div>
                   </div>
-                  <div className={"al-comp al-num " + (this.state.result ? 'hide' : 'show')}>
-                    <p className="al-title">Children (0-17)</p>
-                    <div className="al-input al-num">
-                      <input value={this.state.childrens} onChange={e => this.setState({ childrens: e.target.value })} type="number" min="0"/>
+                  <div className="al-nums" style={{display:'flex'}}>
+                    <div className={"al-comp al-num " + (this.state.result ? 'hide' : 'show')}>
+                      <p className="al-title">Adults (18+)</p>
+                      <div className="al-input al-num ">
+                        <input value={this.state.adults} onChange={e => this.setState({adults: e.target.value})} type="number" min="1"/>
+                      </div>
+                    </div>
+                    <div className={"al-comp al-num " + (this.state.result ? 'hide' : 'show')}>
+                      <p className="al-title">Children (0-17)</p>
+                      <div className="al-input al-num">
+                        <input value={this.state.childrens} onChange={e => this.setState({ childrens: e.target.value })} type="number" min="0"/>
+                      </div>
                     </div>
                   </div>
                 </div>
                 <div className="al-comp al-searchbtn">
                   <p className="al-title">&nbsp;</p>
-                  <div>
+                  <div className="al-btnwrap">
                     <Button variant="raised" color="primary" onClick={e => this.setState({ result: !this.state.result })}>
                       Search Trips
                     </Button>
@@ -160,3 +164,4 @@ export default class Search extends React.Component<{},any> {
     )
   }
 }
+

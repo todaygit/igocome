@@ -151,8 +151,6 @@ $result-title: #37366d;
 
 .al-2 {
   align-items: flex-start;
-  padding-left: 40px;
-  padding-right: 40px;
   flex-wrap: wrap;
 }
 
@@ -223,4 +221,73 @@ $result-title: #37366d;
 }
 .al-comp .al-input input {
   flex: 2;
+}
+
+.al-inputs {
+  align-items: flex-start;
+}
+
+@media only screen and (max-width: 5000px) {
+  .al-container {
+    border-top: 5px red solid;
+  }
+  .al-dates, .al-others, .al-dandn {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+  }
+  .al-places .al-input:not(.mark) {
+    min-width: 212px;
+  }
+}
+
+@media only screen and (max-width: 1800px) {
+  .al-container {
+    border-top: 5px blue solid;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .al-container {
+    border-top: 5px green solid;
+  }
+  .al-exchange {
+    display: none !important;
+  }
+  .al-others, .al-dandn {
+    flex-wrap: wrap;
+  }
+  .al-others {
+    flex-direction: column;
+  }
+  .al-dates {
+    flex-grow: 1;
+  }
+  .al-btnwrap {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .al-container {
+    border-top: 5px yellow solid;
+  }
+  .al-places, .al-dates {
+    flex-wrap: wrap;
+  }
+  .al-dates {
+    width: 100%;
+  }
+  .al-date {
+    flex: 1;
+  }
+  .al-inputs {
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .al-container {
+    border-top: 5px red solid;
+  }
 }
