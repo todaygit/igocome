@@ -8,7 +8,8 @@
   width: 100%;
   padding: 0;
   z-index: 2;
-  max-height: 76px;
+  min-height: 75px;
+  max-height: 75px;
   max-width: 1340px;
 
   img {
@@ -40,6 +41,7 @@
     border: none;
     outline: none;
     padding-right: 20px;
+    height: 75px;
   }
 
   .igo {
@@ -102,7 +104,8 @@
 .al-hwrap {
   display: flex;
   justify-content: center;
-  height: 76px;
+  align-items: center;
+  height: 75px;
   width: 100vw;
   position: fixed;
   top: 0;
