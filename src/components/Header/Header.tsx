@@ -69,7 +69,6 @@ export default class Header extends React.Component<{},any> {
     const { anchorEl } = this.state;
     return (
       <div className="al-hwrap" id="header">
-        {/* <h1>{JSON.stringify(this.state)}</h1> */}
         <div className={"header " + (this.state.anchorEl ? 'bgop' : '')}>
           <div style={{ position: 'fixed', right: '0', top: '50%', display: 'flex', flexDirection:'column'}}>
             <NavLink exact to='/'>Home</NavLink>
