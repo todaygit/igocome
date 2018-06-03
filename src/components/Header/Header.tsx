@@ -30,10 +30,27 @@ export default class Header extends React.Component<{},any> {
   constructor(props) {
     super(props);
     this.state = {
-      anchorEl: null
+      anchorEl: null,
+      scrollY: 0,
+      width: 0
     };
     this.handleClick = this.handleClick.bind(this);
     this.handleClose = this.handleClose.bind(this);
+    this.handleScroll();
+  }
+  handleScroll() {
+    window.addEventListener('scroll',(e)=>{
+      console.log(window.scrollY);
+      this.setState({scrollY:window.scrollY})
+    })
+    this.setState({width:window.innerWidth})
+    window.addEventListener('resize', (e) => {
+      console.log('width', window.innerWidth);
+      this.setState({width:window.innerWidth})
+      if (window.innerWidth > 900) {
+        this.setState({anchorEl:null});
+      }
+    })
   }
   handleClick(event) {
     if (this.state.anchorEl) {
@@ -52,6 +69,7 @@ export default class Header extends React.Component<{},any> {
     const { anchorEl } = this.state;
     return (
       <div className="al-hwrap" id="header">
+        {/* <h1>{JSON.stringify(this.state)}</h1> */}
         <div className={"header " + (this.state.anchorEl ? 'bgop' : '')}>
           <div style={{ position: 'fixed', right: '0', top: '50%', display: 'flex', flexDirection:'column'}}>
             <NavLink exact to='/'>Home</NavLink>

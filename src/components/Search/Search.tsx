@@ -73,7 +73,7 @@ export default class Search extends React.Component<{},any> {
                       shouldItemRender={(item, value) => item.city.toLowerCase().indexOf(value.toLowerCase()) > -1}
                       getItemValue={item => item.city}
                       renderItem={(item, highlighted) =>
-                        <div key={item.country} style={{ backgroundColor: highlighted ? '#eee' : 'transparent' }}>
+                        <div key={item.country} style={{ backgroundColor: (highlighted ? '#eee' : 'transparent') }}>
                           {item.city}
                         </div>
                       }
