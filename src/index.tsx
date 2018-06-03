@@ -4,14 +4,22 @@ import { BrowserRouter } from "react-router-dom";
 import {AppContainer} from "react-hot-loader";
 import App from "./components/App";
 
+import { createStore } from 'redux'
+import reducers from './reducers';
+import { Provider } from 'react-redux';
+
+const store = createStore(reducers);
+
 const rootEl = document.getElementById("root");
 
 render(
-    <AppContainer>
-        <BrowserRouter>
-            <App/>
-        </BrowserRouter>
-    </AppContainer>,
+    <Provider store={store}>
+        <AppContainer>
+            <BrowserRouter>
+                <App/>
+            </BrowserRouter>
+        </AppContainer>
+    </Provider>,
     rootEl
 );
 

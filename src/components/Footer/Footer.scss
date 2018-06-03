@@ -1,12 +1,13 @@
 .footer {
   width: 100%;
-  position: fixed;
-  bottom: 0;
+  // position: fixed;
+  // bottom: 0;
   display: flex;
   flex-flow: row nowrap;
   align-items: center;
   background: #040333;
   padding: 0;
+  max-width: 1340px;
 
   .copyright {
     color: gray;
@@ -27,4 +28,12 @@
       margin: auto 20px;
     }
   }
+}
+.al-fwrap {
+  width: 100vw;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  background: #040333;
 }

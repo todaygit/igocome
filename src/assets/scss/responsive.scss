@@ -32,11 +32,16 @@
   }
 }
 
+@media screen and (max-width: 1600px) {
+  #bg {
+    background-image: url("../img/photos/1600-hero-banner.png") !important;
+    background-position: top right !important;
+  }
+}
 @media screen and (max-width: 1200px) {
   #bg {
     background-image: url("../img/photos/900-1330-b-2-c-banner.png") !important;
     background-position: top right !important;
-    height: 55vh !important;
   }
 
   div.al-show {

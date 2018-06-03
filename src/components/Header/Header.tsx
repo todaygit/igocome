@@ -51,40 +51,42 @@ export default class Header extends React.Component<{},any> {
   render() {
     const { anchorEl } = this.state;
     return (
-      <div className={"header " + (this.state.anchorEl ? 'bgop' : '')} id="header">
-        <div style={{ position: 'fixed', right: '0', top: '50%', display: 'flex', flexDirection:'column'}}>
-          <NavLink exact to='/'>Home</NavLink>
-          <NavLink exact to='/search'>Search</NavLink>
-        </div>
-        <img src={logo} width="108" height="54" />
-        <ul className="menu">
-          <li>Login</li>
-          <li>Register</li>
-        </ul>
-        <button className="igo">iGoCome for Business</button>
-        <button
-          onClick={this.handleClick}
-          className="bars"
-        >
-          <i className={"fa "+(this.state.anchorEl ? 'fa-close' : 'fa-bars')} aria-hidden="true"></i>
-        </button>
-        <div
-          id="simple-menu"
-          style={{width : '100%', transition:'0.5s'}}
-          className={(this.state.anchorEl ? 'show' : 'hide')}
-        >
-          <ListItem onClick={this.handleClose} button>
-            <ListItemIcon>
-              <ExitToAppIcon />
-            </ListItemIcon>
-            <ListItemText primary="Login" />
-          </ListItem>
-          <ListItem onClick={this.handleClose} button>
-            <ListItemIcon>
-              <PersonIcon />
-            </ListItemIcon>
-            <ListItemText primary="Register" />
-          </ListItem>
+      <div className="al-hwrap" id="header">
+        <div className={"header " + (this.state.anchorEl ? 'bgop' : '')}>
+          <div style={{ position: 'fixed', right: '0', top: '50%', display: 'flex', flexDirection:'column'}}>
+            <NavLink exact to='/'>Home</NavLink>
+            <NavLink exact to='/search'>Search</NavLink>
+          </div>
+          <img src={logo} width="108" height="54" />
+          <ul className="menu">
+            <li>Login</li>
+            <li>Register</li>
+          </ul>
+          <button className="igo">iGoCome for Business</button>
+          <button
+            onClick={this.handleClick}
+            className="bars"
+          >
+            <i className={"fa "+(this.state.anchorEl ? 'fa-close' : 'fa-bars')} aria-hidden="true"></i>
+          </button>
+          <div
+            id="simple-menu"
+            style={{width : '100%', transition:'0.5s'}}
+            className={(this.state.anchorEl ? 'show' : 'hide')}
+          >
+            <ListItem onClick={this.handleClose} button>
+              <ListItemIcon>
+                <ExitToAppIcon />
+              </ListItemIcon>
+              <ListItemText primary="Login" />
+            </ListItem>
+            <ListItem onClick={this.handleClose} button>
+              <ListItemIcon>
+                <PersonIcon />
+              </ListItemIcon>
+              <ListItemText primary="Register" />
+            </ListItem>
+          </div>
         </div>
       </div>
     );

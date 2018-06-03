@@ -1,16 +1,15 @@
 .header {
   // min-height: 76px;
-  background-color: rgba(4, 3, 51, 0.2);
   display: flex;
   flex-flow: row wrap;
   align-items: center;
-  border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
   position: fixed;
   top: 0;
   width: 100%;
   padding: 0;
   z-index: 2;
   max-height: 76px;
+  max-width: 1340px;
 
   img {
     margin: 10px 20px;
@@ -98,4 +97,16 @@
   svg {
     color: white !important;
   }
+}
+
+.al-hwrap {
+  display: flex;
+  justify-content: center;
+  height: 76px;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  background-color: rgba(4, 3, 51, 0.2);
+  border-bottom: 1px rgba(255, 255, 255, 0.2) solid;
+  z-index: 2;
 }
